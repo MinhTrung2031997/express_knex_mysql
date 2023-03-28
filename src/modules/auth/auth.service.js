@@ -82,6 +82,10 @@ module.exports = authService = {
   refreshToken: async (refreshToken) => {
     try {
       const refreshTokenSecret = process.env.REFRESH_TOKEN_SECRET;
+      const token =  await knex(`${TOKENS}`).where("refreshToken", refreshToken).first();
+      if(!token) {
+        return null
+      }
       const decoded = jwt.verify(refreshToken, refreshTokenSecret);
       if (!decoded) {
         return null;
