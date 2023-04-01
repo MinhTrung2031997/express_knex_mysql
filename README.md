@@ -1,7 +1,12 @@
-# express_knex_mysql
+
 Building project with knex and mysql
 
-Step 1: npm i
+# Step 1
+Step 1:Run "npm install"
+
+# Step 2
 step 2: Run "npm run migrate" command to migrate the schema to database
+
+# Step 2
 step 3: Run "npm start" commad and call APIs (signUp, signIn, signOut, refreshToken)
 
